@@ -382,8 +382,8 @@
     .reveal.visible { opacity: 1; transform: none; }
   </style>
   <!-- GHL Chat Widget -->
-  <script>window.GHL_CHAT_LOCATION_ID = "jDoRsNEPg0qtXUYNouR3";</script>
-  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="jDoRsNEPg0qtXUYNouR3" defer></script>
+  <script>window.GHL_CHAT_LOCATION_ID = "qpJIthlI0j2Km9viDFGO";</script>
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="qpJIthlI0j2Km9viDFGO" defer></script>
 </head>
 <body>
 
@@ -745,7 +745,7 @@
     btn.textContent = 'Sending…';
 
     const payload = {
-      locationId: 'jDoRsNEPg0qtXUYNouR3',
+      locationId: 'qpJIthlI0j2Km9viDFGO',
       firstName: document.getElementById('name').value.split(' ')[0],
       lastName: document.getElementById('name').value.split(' ').slice(1).join(' ') || '',
       phone: document.getElementById('phone').value,
@@ -754,7 +754,7 @@
       city: 'Lubbock',
       state: 'TX',
       country: 'US',
-      tags: ['source:roofing-lubbock', '806pro', formData.service, formData.urgency].filter(Boolean),
+      tags: ['source:roofing-lubbock', 'type:consumer-lead', 'brand:806-pro', formData.service, formData.urgency].filter(Boolean),
       customFields: [
         { key: 'service_type', field_value: formData.service },
         { key: 'urgency', field_value: formData.urgency }
