@@ -739,13 +739,21 @@
     };
 
     try {
-      await fetch('https://services.leadconnectorhq.com/contacts/', {
-        method: 'POST',
-        headers: {
-          'Authorization': 'Bearer pit-2c2c7097-c7d9-4f99-bfc4-0359c9fc805c',
-          'Version': '2021-07-28',
-          'Content-Type': 'application/json'
-        },
+      const payload = {
+  name: document.getElementById('name').value.trim(),
+  phone: document.getElementById('phone').value.trim(),
+  email: document.getElementById('email').value.trim(),
+  address: document.getElementById('address').value.trim(),
+  service: formData.service || '',
+  source: 'lubbockroofingleads-homepage',
+  timestamp: new Date().toISOString()
+};
+try {
+  await fetch('https://services.leadconnectorhq.com/hooks/qpJIthlI0j2Km9viDFGO/webhook-trigger/cDZrMWtFAISoxkAWLimc', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });,
         body: JSON.stringify(payload)
       });
       document.getElementById('step2').style.display = 'none';
